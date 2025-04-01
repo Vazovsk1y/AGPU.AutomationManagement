@@ -7,6 +7,7 @@ public record ProblemDTO(
     Guid Id,
     string Title,
     DateTimeOffset CreationDateTime,
+    Guid CreatorId,
     string CreatorFullName,
     string CreatorPost,
     ContractorDTO? Contractor,

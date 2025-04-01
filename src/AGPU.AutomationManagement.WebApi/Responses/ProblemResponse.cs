@@ -6,6 +6,7 @@ public record ProblemResponse(
     Guid Id,
     string Title,
     DateTimeOffset CreationDateTime,
+    Guid CreatorId,
     string CreatorFullName,
     string CreatorPost,
     ContractorResponse? Contractor,

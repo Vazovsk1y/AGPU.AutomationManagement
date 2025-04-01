@@ -36,6 +36,7 @@ internal sealed class ProblemByIdFetchUseCase(
             pr.Id,
             pr.Title,
             pr.CreationDateTime,
+            pr.Creator.Id,
             pr.Creator.FullName,
             pr.Creator.Post,
             pr.Contractor?.ToContractorDTO(),

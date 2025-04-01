@@ -141,6 +141,7 @@ public static class Mapper
             dto.Id,
             dto.Title,
             dto.CreationDateTime,
+            dto.CreatorId,
             dto.CreatorFullName,
             dto.CreatorPost,
             dto.Contractor?.ToResponse(),
