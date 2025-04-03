@@ -17,6 +17,8 @@ internal sealed class RevokeRefreshTokenUseCase(
 
         var currentUser = await currentUserProvider.GetRequiredCurrentUserAsync();
         
+        // TODO: Implement access token invalidation.
+        
         await writeDbContext
             .UserTokens
             .Where(e => e.UserId == currentUser.Id &&
