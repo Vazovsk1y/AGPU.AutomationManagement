@@ -46,7 +46,9 @@ public static class Mapper
             dto.CreatorFullName,
             dto.Audience,
             dto.Status,
-            dto.Type
+            dto.Type,
+            dto.SolvingScoreValue,
+            dto.SolvingScoreDescription
         );
     }
 

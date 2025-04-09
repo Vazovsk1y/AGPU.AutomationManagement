@@ -40,7 +40,9 @@ internal sealed class ProblemOverviewsPageFetchUseCase(
                 e.Creator.FullName,
                 e.Audience,
                 e.Status,
-                e.Type
+                e.Type,
+                e.SolvingScore!.Value,
+                e.SolvingScore.Description
             ))
             .ToListAsync(cancellationToken);
 

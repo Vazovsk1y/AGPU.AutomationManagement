@@ -9,4 +9,6 @@ public record ProblemOverviewResponse(
     string CreatorFullName,
     string Audience,
     ProblemStatus Status,
-    ProblemType Type);
+    ProblemType Type, 
+    float? SolvingScoreValue,
+    string? SolvingScoreDescription);
