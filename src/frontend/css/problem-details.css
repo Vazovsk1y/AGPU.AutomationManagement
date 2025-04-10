@@ -1,0 +1,158 @@
+@import "reset.css";
+@import "shared.css";
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    width: 100%;
+    padding-left: 350px;
+    padding-right: 350px;
+    gap: 15px;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form label{
+    font-weight: 550;
+    font-size: 18px;
+}
+
+.form input{
+    font-weight: 550;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form select{
+    font-weight: 550;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.problem-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.problem-status {
+    padding: 8px;
+    align-self: flex-start;
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+}
+
+.divider {
+    height: 2px;
+    border-width: 0;
+    background-color: gray;
+}
+
+.problem-content {
+    display: flex;
+    gap: 20px;
+}
+
+.problem-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.problem-creator {
+    background: gray;
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    gap: 5px;
+}
+
+.problem-creator span {
+    color: white;
+}
+
+.problem-creator span:nth-child(2),
+.problem-creator span:nth-child(3) {
+    color: lightgray;
+}
+
+.description-text {
+    resize: none;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.problem-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.problem-footer {
+    font-weight: 600;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.solving-feedback {
+    resize: none;
+    width: 100%;
+}
+
+.problem-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.problem-actions button {
+    padding: 5px;
+    background: #1e6883;
+    color: white;
+    font-size: 16px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.modal-rating-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-rating-container span{
+    font-size: 18px;
+}
+
+.stars .fa{
+    cursor: pointer;
+}
+
+.star-checked {
+    color: orange;
+}
+
+.rating-container {
+    display: flex;
+    gap: 10px;
+    font-size: 22px;
+}

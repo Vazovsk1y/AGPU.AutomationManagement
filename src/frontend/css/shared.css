@@ -1,0 +1,203 @@
+.body-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    background-color: #1e6883;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    text-align: center;
+    font-size: 5px;
+    color: white;
+}
+
+.main-navigation {
+    visibility: hidden;
+    display: flex;
+    gap: 20px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 550;
+    transition: all 0.4s;
+}
+
+.main-navigation a:hover {
+    color: black;
+}
+
+.confirm-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: all 0.4s;
+    color: #1e6883;
+    font-weight: 600;
+}
+
+.confirm-button:hover {
+    color: white;
+    background-color: black;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.user-info span{
+    font-size: 18px;
+    color: white;
+    font-weight: 550;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #1e6883;
+    padding: 20px 0 20px 0;
+}
+
+footer p{
+    color: white;
+}
+
+.new-entity-button{
+    background: none;
+    color: #1e6883;
+    font-weight: 550;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.new-entity-button:hover{
+    color: #15505f;
+}
+
+.pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 40px 0;
+}
+
+.page-numbers{
+    display: flex;
+    gap: 8px;
+}
+
+.pager-button, .page-numbers button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 2px solid #d1d5da;
+    background-color: #f6f8fa;
+    color: #1e6883;
+    font-weight: 550;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pager-button:disabled {
+    color: #d1d5da;
+    cursor: not-allowed;
+}
+
+.page-numbers button.active {
+    background-color: #0366d6;
+    color: #fff;
+    border-color: #0366d6;
+}
+
+.pager-number:hover:not(.active),
+.page-numbers button:hover:not(:disabled) {
+    background-color: #e1e4e8;
+}
+
+.error-message {
+    display: block;
+    color: red;
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    padding: 10px 20px 15px 20px;
+    flex-direction: column;
+    min-height: auto;
+    min-width: 450px;
+    background-color: #1e6883;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.close-button {
+    color: red;
+    font-weight: bold;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+}
+
+.tools-select{
+    border: 2px solid #1e6883;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: inherit;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-container p {
+    color: white;
+    font-size: 18px;
+}

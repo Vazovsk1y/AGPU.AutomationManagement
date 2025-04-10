@@ -34,4 +34,18 @@ services:
       - POSTGRES_DB=AutomationManagementDb
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=12345678
+  
+  automation-management.frontend:
+    image: automation-management.frontend
+    container_name: automation-management.frontend
+    restart: no
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile
+    environment:
+      API_BASE_URL: "http://localhost:5555/api"
+    ports:
+      - "80:80"
+    depends_on:
+      - automation-management.webapi
       
