@@ -1,7 +1,5 @@
 document.getElementById("sign-in-form").addEventListener("submit", async function (e) {
     e.preventDefault();
-    document.getElementById("errors").style.display = "none";
-
     const urlParams = new URLSearchParams(window.location.search);
     const callbackUrl = urlParams.get("callbackUrl");
 
