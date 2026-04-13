@@ -128,10 +128,10 @@ async function loadProblems(pageIndex, pageSize, status) {
                 ${problem.title}
             </h3>
             <hr>
-            <p><strong>📅 Дата создания:</strong> ${formattedDate}</p>
-            <p><strong>👤 Создатель:</strong> ${problem.creatorFullName}</p>
-            <p><strong>🏢 Аудитория:</strong> ${problem.audience}</p>
-            <p><strong>${problemTypesMap[problem.type].icon} Тип:</strong> ${problemTypesMap[problem.type].ru}</p>
+            <p><strong>${getIconLabel('calendar', 'Дата создания:')}</strong> ${formattedDate}</p>
+            <p><strong>${getIconLabel('user', 'Создатель:')}</strong> ${problem.creatorFullName}</p>
+            <p><strong>${getIconLabel('building', 'Аудитория:')}</strong> ${problem.audience}</p>
+            <p><strong>${getIconLabel(problemTypesMap[problem.type].iconName, 'Тип:')}</strong> ${problemTypesMap[problem.type].ru}</p>
         </div>
     `;
                 usersList.appendChild(li);

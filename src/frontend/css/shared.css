@@ -302,3 +302,61 @@ footer p {
 		word-break: break-word;
 	}
 }
+
+
+.ui-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.1em;
+	height: 1.1em;
+	flex: 0 0 auto;
+	vertical-align: text-bottom;
+}
+
+.ui-icon svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.icon-label,
+.icon-heading {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.icon-label strong,
+.icon-heading strong {
+	display: inline;
+}
+
+.star-button,
+.star-icon {
+	color: #c4c4c4;
+}
+
+.star-button {
+	padding: 0;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	line-height: 0;
+	transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.star-button:hover {
+	transform: scale(1.08);
+}
+
+.star-button .ui-icon,
+.star-icon .ui-icon {
+	width: 28px;
+	height: 28px;
+}
+
+.star-button.star-checked,
+.star-icon.star-checked {
+	color: orange;
+}
