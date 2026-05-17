@@ -4,15 +4,29 @@
 .content-container {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
     width: 100%;
-    padding-left: 350px;
-    padding-right: 350px;
-    gap: 10px;
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 0 16px 24px;
+    gap: 16px;
 }
 
-.project-info, .team-info, .team-info ul{
+.project-info, .team-info, .team-info ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        margin-top: 24px;
+        padding: 0 12px 20px;
+    }
+
+    .project-info p,
+    .team-info li {
+        font-size: 15px;
+        line-height: 1.5;
+        word-break: break-word;
+    }
 }

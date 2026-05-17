@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     const ratingValue = document.getElementById("modal-rating-value");
-    const stars = document.getElementById("modal-stars").querySelectorAll(".fa");
+    const stars = document.getElementById("modal-stars").querySelectorAll(".star-button");
 
     stars.forEach(star => {
         star.addEventListener("click", function() {
@@ -210,40 +210,14 @@ function renderProblemDetails(problem) {
 
     let starsHtml = "";
     if (problem.solvingScoreValue) {
-        const starsContainer = document.createElement("div");
-        starsContainer.classList.add("rating-container");
-
-        starsContainer.innerHTML = `
-            <div class="stars">
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                </div>
-           <span>${problem.solvingScoreValue}</span>
-    `;
-
-        let counter = 0;
-        for (const star of starsContainer.querySelector(".stars").querySelectorAll(".fa"))
-        {
-            if (counter >= problem.solvingScoreValue)
-            {
-                break;
-            }
-
-            star.classList.add("star-checked");
-            counter++;
-        }
-
-        starsHtml = starsContainer.outerHTML;
+        starsHtml = getStarRatingHtml(problem.solvingScoreValue);
     }
 
     container.innerHTML = `
     <div class="problem-header">
     <h1>${problem.title}</h1>
     <span class="problem-status" style="background-color: ${statusInfo.color};">
-        ${statusInfo.icon} ${statusInfo.ru}
+        ${getIconSvg(statusInfo.iconName, statusInfo.ru)} ${statusInfo.ru}
     </span>
 </div>
 <hr class="divider">
@@ -259,17 +233,17 @@ function renderProblemDetails(problem) {
     
     <div class="problem-meta">
         <div class="meta-item">
-            <p><strong>🏢 Аудитория:</strong></p>
+            <p><strong>${getIconLabel('building', 'Аудитория:')}</strong></p>
             <p>${problem.audience}</p>
             <hr class="divider">
         </div>
         <div class="meta-item">
-            <p><strong>${problemTypesMap[problem.type].icon} Тип проблемы:</strong></p>
+            <p><strong>${getIconLabel(problemTypesMap[problem.type].iconName, 'Тип проблемы:')}</strong></p>
             <p>${problemTypesMap[problem.type].ru}</p>
             <hr class="divider">
         </div>
         <div class="meta-item">
-            <p><strong>👤 Исполнитель:</strong></p>
+            <p><strong>${getIconLabel('user', 'Исполнитель:')}</strong></p>
             <p>${problem.contractor?.fullName ?? ""}</p>
             <hr class="divider">
         </div>

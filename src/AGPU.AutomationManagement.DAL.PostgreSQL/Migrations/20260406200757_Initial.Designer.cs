@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AGPU.AutomationManagement.DAL.PostgreSQL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241113190149_Initial")]
+    [Migration("20260406200757_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -240,15 +240,15 @@ namespace AGPU.AutomationManagement.DAL.PostgreSQL.Migrations
                             Id = new Guid("3c04bbfc-9f26-444d-8028-9303e2e5f2e8"),
                             AccessFailedCount = 0,
                             ConcurrencyStamp = "3c04bbfd-9f26-444d-8028-9303e2e5f2e8",
-                            Email = "not_a_real_email@gmail.com",
+                            Email = "not_a_real_email@mail.ru",
                             EmailConfirmed = false,
                             FullName = "Самый Первый Пользователь",
                             LockoutEnabled = false,
-                            NormalizedEmail = "NOT_A_REAL_EMAIL@GMAIL.COM",
+                            NormalizedEmail = "NOT_A_REAL_EMAIL@MAIL.RU",
                             NormalizedUserName = "SUPERUSER",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOO9UBzV2/lxZKRaW3L9ITHx0moEJfdONMc4as4g8TgOjUsojvnkS4k+ErocAl30lQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEO0eXu46tw48YeNNT1dRN349yfwh91lRatxWbbt9WCuJfXX6zjL1EA1M6fZavIryPA==",
                             PhoneNumberConfirmed = false,
-                            Post = "Всемогущий",
+                            Post = "Суперадмин",
                             SecurityStamp = "3c04bbfc-9f26-444d-8028-9303e2e5f2e6",
                             TwoFactorEnabled = false,
                             UserName = "SuperUser"
